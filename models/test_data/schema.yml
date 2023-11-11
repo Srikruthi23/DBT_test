@@ -1,0 +1,12 @@
+version: 2
+sources:
+- name: TPCH_SF1
+  description: SAMPLE DATA
+  loader: DBT Data Load
+  database: SNOWFLAKE_SAMPLE_DATA
+  schema: TPCH_SF1
+  tables:
+  - name: CUSTOMER
+    description: CUSTOMER
+  - name: ORDERS
+    description: ORDERS
