@@ -10,3 +10,77 @@ sources:
     description: CUSTOMER
   - name: ORDERS
     description: ORDERS
+models:
+- name: customer_data_dim
+  description: customer_data
+  columns:
+  - name: C_CUSTKEY
+    description: customer_key
+  - name: C_NAME
+    description: customer_name
+  - name: C_ADDRESS
+    description: customer_address
+  - name: C_NATIONKEY
+    description: customer_nationkey
+  - name: C_PHONE
+    description: customer_phone
+  - name: C_ACCTBAL
+    description: customer_accountbalance
+  - name: C_MKTSEGMENT
+    description: customer_segment
+  - name: C_COMMENT
+    description: customer_comment
+- name: orders_data_fact
+  description: orders_data
+  columns:
+  - name: O_ORDERKEY
+    description: order_key
+  - name: O_CUSTKEY
+    description: order_customerkey
+  - name: O_ORDERSTATUS
+    description: order_orderstatus
+  - name: O_TOTALPRICE
+    description: order_totalprice
+  - name: O_ORDERDATE
+    description: order_orderdate
+  - name: O_ORDERPRIORITY
+    description: order_orderpriority
+  - name:  O_CLERK
+    description: order_clerk
+  - name:  O_SHIPPRIORITY
+    description: order_shippriority
+  - name:  O_COMMENT
+    description: order_comment
+- name: customer_totalprice_fact
+  description: customerstotalprice_data
+  columns:
+  - name: C_CUSTKEY
+    description: customer_key
+  - name: C_NAME
+    description: customer_name
+  - name: C_ADDRESS
+    description: customer_address
+  - name: C_NATIONKEY
+    description: customer_nationkey
+  - name: C_PHONE
+    description: customer_phone
+  - name: C_ACCTBAL
+    description: customer_accountbalance
+  - name: C_MKTSEGMENT
+    description: customer_segment
+  - name: C_COMMENT
+    description: customer_comment
+  - name: O_ORDERKEY
+    description: order_key
+  - name: O_ORDERSTATUS
+    description: order_orderstatus
+  - name: O_ORDERDATE
+    description: order_orderdate
+  - name: CO_TOTALPRICE
+    description: customer_orderstotalprice
+  
+  
+  
+  
+  
+
